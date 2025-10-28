@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Усі товари — Ukrainian Craft Market</title>
+  <style>
+    :root{
+      --bg:#faf7f2; --card:#ffffff; --text:#1b1b1b; --muted:#6b6b6b;
+      --accent:#c8a97e; --green:#2e7d32; --red:#c62828; --shadow:0 6px 24px rgba(0,0,0,.08)
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    header{position:sticky;top:0;background:var(--bg);backdrop-filter:saturate(150%) blur(4px);border-bottom:1px solid #eae6e0;z-index:5}
+    .wrap{max-width:1180px;margin:0 auto;padding:20px}
+    h1{margin:8px 0 0;font-size:28px}
+    .sub{color:var(--muted);margin:4px 0 18px}
+
+    /* 3 у рядку на десктопі */
+    .grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:22px}
+    @media (max-width: 980px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width: 620px){.grid{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+
+    .img-wrap{position:relative;aspect-ratio:4/3;overflow:hidden;background:#f1ece5}
+    .img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+    .card:hover .img-wrap img{transform:scale(1.06)}
+
+    .content{padding:14px 16px 16px}
+    .title{font-weight:700;font-size:18px;margin:0 0 6px}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:10px}
+    .desc{font-size:14px;margin:0 0 10px;color:#2f2f2f}
+
+    .avail{font-weight:600;font-size:13px;margin-bottom:12px;display:inline-flex;align-items:center;gap:8px}
+    .dot{width:8px;height:8px;border-radius:999px;display:inline-block}
+    .in-stock{color:var(--green)}
+    .in-stock .dot{background:var(--green)}
+    .out-stock{color:var(--red)}
+    .out-stock .dot{background:var(--red)}
+
+    .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .master{font-size:13px;color:var(--muted)}
+    .btn{appearance:none;border:0;cursor:pointer;background:var(--text);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700}
+    .btn:hover{filter:brightness(.95)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Усі товари</h1>
+      <p class="sub">Відкрийте для себе повний каталог унікальних виробів: від витончених прикрас до натуральних продуктів. Кожен товар має свою історію, створену руками українських майстрів..</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <!-- ТОВАР 1–34 -->
+      
+      <!-- t1 -->
+      <article class="card">
+        <a class="img-wrap" href="#"><img src="img/t1.avif" alt="Товар t1" loading="lazy"></a>
+        <div class="content">
+          <h3 class="title">Абстрактні сережки "Мінімалізм Лінії"</h3>
+          <div class="meta">Матеріал: Гіпоалергенний сплав з позолотою 585 проби | Колір: Золотистий матовий| Розмір: Довжина – 4 см</div>
+          <p class="desc">Елегантні сережки-лінії у сучасному стилі. Ідеальний вибір для лаконічного та вишуканого образу.</p>
+          <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+          <div class="row">
+            <div class="master">Майстер: Катерина</div>
+            <button class="btn">Додати в кошик</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- t2 -->
+      <article class="card">
+        <a class="img-wrap" href="#"><img src="img/t2.avif" alt="Товар t2" loading="lazy"></a>
+        <div class="content">
+          <h3 class="title">Кольє "Золоте Сонце"</h3>
+          <div class="meta">Матеріали: Бісер, латунь | Колір: Золотистий, карамель | Розміри: Довжина 45 см, One size</div>
+          <p class="desc">Масивне плетене кольє з етнічними мотивами. Центральний елемент імітує старовинний кулон.</p>
+          <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+          <div class="row"><div class="master">Майстер: Дмитро</div><button class="btn">Додати в кошик</button></div>
+        </div>
+      </article>
+
+      <!-- t3 -->
+      <article class="card">
+        <a class="img-wrap" href="#"><img src="img/t3.avif" alt="Товар t3" loading="lazy"></a>
+        <div class="content">
+          <h3 class="title">Сумка з бісеру "Перлина"</h3>
+          <div class="meta">Матеріали: Бісер, сатинова підкладка | Колір: Айворі | Розміри: 15×20 см</div>
+          <p class="desc">Акуратна сумочка, доповнить святкові образи.</p>
+          <div class="avail out-stock"><span class="dot"></span>нема в наявності</div>
+          <div class="row"><div class="master">Майстер: Діана</div><button class="btn" disabled>Додати в кошик</button></div>
+        </div>
+      </article>
+
+      <!-- t4 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t4.avif" alt="Сумка «Сонячне плетіння»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Сумка «Сонячне плетіння»</h3>
+    <div class="meta">Матеріал: Бісер, ручне в'язання | Колір: бежевий | Розмір: 25×20 см, S–L</div>
+    <p class="desc">Легка літня сумка-клатч, мінімум деталей, максимум ручної роботи.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Олена</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t5 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t5.avif" alt="Шкатулки для прикрас (набір 3 шт.)" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Шкатулки для прикрас (набір 3 шт.)</h3>
+    <div class="meta">Матеріали: акрил, бісер, атлас | Колір: айворі | Розмір: різні</div>
+    <p class="desc">Елегантні скриньки для зберігання дрібниць і прикрас, декоровані бісером.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Катерина</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t6 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t6.avif" alt="Підставка для каблучок «Тіні»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Підставка для каблучок «Тіні»</h3>
+    <div class="meta">Матеріали: гіпс, полімерна глина | Колір: білий матовий, сірий | Розмір: Ø 15 см</div>
+    <p class="desc">Мінімалістична підставка у вигляді обличчя та рук. Авторський дизайн.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Анастасія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t7 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t7.avif" alt="Намисто з річкових перлів" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Намисто з річкових перлів</h3>
+    <div class="meta">Матеріали: річкові перли, ювелірний дріт | Колір: перламутровий, білий | Довжина: 50 см</div>
+    <p class="desc">Класичне намисто з натуральних перлів - елегантний подарунок.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Вікторія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t8 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t8.avif" alt="Набір брошок «Квітуча Орхідея»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Браслет «Квітуча Орхідея»</h3>
+    <div class="meta">Полімерна глина, ювелірний дріт, металева фурнітура | Колір: рожевий, фіолетовий | Регульований: (16–20 см)</div>
+    <p class="desc">Витончений браслет, прикрашений реалістичними квітами орхідеї, виготовленими та розписаними вручну з полімерної глини.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Вікторія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t9 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t9.avif" alt="В'язаний кардиган «Бабусина сітка»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">В'язаний кардиган «Бабусина сітка»</h3>
+    <div class="meta">Матеріали: акрил, мохер | Колір: коричневий, помаранчевий | Розмір: one size</div>
+    <p class="desc">Легкий кардиган у техніці «бабусин квадрат» — яскравий і теплий акцент образу.</p>
+    <div class="avail out-stock"><span class="dot"></span>нема в наявності</div>
+    <div class="row"><div class="master">Майстер: Олена</div><button class="btn" disabled>Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t10 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t10.avif" alt="В'язаний кардиган з капюшоном" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">В'язаний кардиган з капюшоном</h3>
+    <div class="meta">Матеріал: 70% меринос, 30% акрил | Ручна в'язка | Колір: теплий бежевий | Розмір: 92–110 (дитячий)</div>
+    <p class="desc">Теплий і м'який кардиган ручної в'язки — для прохолодної погоди.</p>
+    <div class="avail out-stock"><span class="dot"></span>нема в наявності</div>
+    <div class="row"><div class="master">Майстер: Олена</div><button class="btn" disabled>Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t11 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t11.avif" alt="Дитячий світшот «Лісова казка»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Дитячий світшот «Лісова казка»</h3>
+    <div class="meta">Матеріал: 100% органічна бавовна | Колір: світло-бежевий | Розміри: 98, 104, 110 см</div>
+    <p class="desc">М'який светер ручної вишивки.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Марія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t12 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t12.avif" alt="Шапка-біні «Холодна осінь»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Шапка-біні «Холодна осінь»</h3>
+    <div class="meta">Матеріали: 50% вовна, 50% альпака | Колір: світло-сірий меланж | Розмір: 56–58 (універсальний)</div>
+    <p class="desc">Тепла унісекс-шапка; високий вміст вовни забезпечує комфорт у мороз.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Дмитро</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t13 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t13.avif" alt="Вишиванка»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Вишиванка»</h3>
+    <div class="meta">Матеріали: натуральний льон, бавовняні нитки | Колір: білий, червоний, чорний | Розмір: S, M, L, XL</div>
+    <p class="desc">Класична жіноча вишиванка з традиційним квітковим орнаментом. Ідеально підходить для святкових подій.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Оксана</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t14 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t14.avif" alt="Вишиванка Червона калина" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Вишиванка "Червона калина"</h3>
+    <div class="meta">Матеріали: натуральна бавовна, шовкові нитки | Колір: насичений червоний, чорна та біла вишивка | Розмір: S, M, L (Жіноча)</div>
+    <p class="desc">Ефектна вишиванка з багатим геометричним орнаментом та широкими рукавами. Ідеально підходить для яскравих образів.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Марія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t15 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t15.avif" alt="Обруч для волосся Польові квіти»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Обруч для волосся</h3>
+    <div class="meta">Матеріали: текстиль (фоаміран), дріт, атлас | Колір: чорний, мікс | Розмір: універсальний</div>
+    <p class="desc">Ошатний обруч для волосся з реалістичними об'ємними квітами, виготовленими вручну.</p>
+    <div class="avail out-stock"><span class="dot"></span>нема в наявності</div>
+    <div class="row"><div class="master">Майстер: Максим</div><button class="btn" disabled>Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t16 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t16.avif" alt="Мед натуральний Квітковий" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Мед натуральний "Квітковий"</h3>
+    <div class="meta">Склад: Натуральний нектар, зібраний бджолами в екологічно чистих регіонах | Колір: Світло-бурштиновий | Вага: 500 г</div>
+    <p class="desc">Свіжий, ароматний квітковий мед. Чудовий природний засіб для зміцнення імунітету.</p>
+    <div class="avail out-stock"><span class="dot"></span>нема в наявності (сезонний продукт)</div>
+    <div class="row"><div class="master">Майстер: Ольга</div><button class="btn" disabled>Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t17 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t17.avif" alt="Сир рікота (домашній)" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Сир рікота (домашній)</h3>
+    <div class="meta">Склад: коров'яче молоко | Колір: білий | Вага: 300 г</div>
+    <p class="desc">Ніжний і свіжий домашній сир рікота — ідеальний для десертів і сніданків.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Галина</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t18 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t18.avif" alt="Крісло-гойдалка «Прованс»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Крісло-гойдалка «Прованс»</h3>
+    <div class="meta">Матеріали: натуральне дерево, ротанг | Колір: світле дерево, бежевий | Розмір: 60×90×100 см</div>
+    <p class="desc">Компактне крісло-гойдалка з ротанга — затишок для тераси чи балкона.</p>
+    <div class="avail out-stock"><span class="dot"></span>нема в наявності</div>
+    <div class="row"><div class="master">Майстер: Михайло</div><button class="btn" disabled>Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t19 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t19.avif" alt="Килимок ручної роботи «Геометрія»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Килимок ручної роботи «Геометрія»</h3>
+    <div class="meta">Матеріал: натуральна бавовна | Колір: червоний, чорний | Розмір: 60×80 см</div>
+    <p class="desc">Невеликий килимок, витканий на верстаті — ідеальний для ванної або передпокою.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Надія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t20 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t20.avif" alt="Домашнє вершкове масло 82.5%" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Домашнє вершкове масло 82.5%</h3>
+    <div class="meta">Склад: натуральні вершки | Колір: жовтий, кремовий | Вага: 250 г</div>
+    <p class="desc">Справжнє фермерське масло, збите з вершків — винятковий смак.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Галина</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t21 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t21.avif" alt="Свіже домашнє молоко (3.2%)" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Свіже домашнє молоко (3.2%)</h3>
+    <div class="meta">Склад: цілісне коров'яче молоко | Колір: білий | Об’єм: 1 л</div>
+    <p class="desc">Свіже непастеризоване молоко від корів вільного випасу.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Галина</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t22 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t22.avif" alt="Набір ароматичних свічок (3 шт.)" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Набір ароматичних свічок (3 шт.)</h3>
+    <div class="meta">Матеріали: соєвий віск, ефірні олії | Об’єм: 3×100 мл | Аромати: лаванда, цитрус, дерево</div>
+    <p class="desc">Свічки у керамічних горщиках — затишок і настрій у кожній баночці.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Оксана</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t23 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t23.avif" alt="Персики консервовані" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Персики консервовані</h3>
+    <div class="meta">Склад: свіжі персики, цукровий сироп, лимонна кислота |  Об’єм: 500 мл</div>
+    <p class="desc">Домашня консервація. Соковиті, стиглі персики, ідеальні для десертів.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Іван</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t24 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t24.avif" alt="Набір трав'яного чаю та меду" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Набір трав'яного чаю та меду</h3>
+    <div class="meta">Склад: натуральний мед, каркаде, сушені ягоди | Колір: бурштиновий, червоний | Об’єм: 3×300 мл</div>
+    <p class="desc">Подарунковий набір для поціновувачів натуральних продуктів і цілющих трав.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Іван</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t25 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t25.avif" alt="Полуничне варення «Літнє»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Полуничне варення «Літнє»</h3>
+    <div class="meta">Склад: полуниця, цукор, лимонний сік | Колір: червоний | Об’єм: 250 мл</div>
+    <p class="desc">Варення з цілих ягід за бабусиним рецептом.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Галина</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t27 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t27.avif" alt="Вази керамічні" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Вази керамічні</h3>
+    <div class="meta">Матеріали: високотемпературна кераміка, емаль | Колір: мікс натуральних пігментів | Розмір: висота 20 см та 15 см</div>
+    <p class="desc">Набір декоративних керамічних ваз з ручним розписом. Стануть чудовим акцентом в інтер'єрі.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Анастасія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t28 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t28.avif" alt="Набір керамічного посуду «Еко»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Набір керамічного посуду «Еко»</h3>
+    <div class="meta">Матеріал: натуральна глина, подвійний випал | Колір: теракотовий матовий | Набір: 4 шт.</div>
+    <p class="desc">Сімейний набір посуду ручної роботи з автентичною матовою текстурою.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Максим</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t29 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t29.avif" alt="Сумка «Снігова Королева»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Сумка «Снігова Королева»</h3>
+    <div class="meta">Матеріал: поліестерний шнур, макраме | Колір: молочний | Розмір: 20×20 см</div>
+    <p class="desc">Жіночна сумка, сплетена у техніці макраме; чудово тримає форму.</p>
+    <div class="avail out-stock"><span class="dot"></span>нема в наявності</div>
+    <div class="row"><div class="master">Майстер: Дмитро</div><button class="btn" disabled>Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t30 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t30.avif" alt="Сумка-корзина «Літній день»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Сумка-корзина «Літній день»</h3>
+    <div class="meta">Матеріали: рафія, ротанг | Колір: натуральний бежевий | Розмір: Ø 28 см</div>
+    <p class="desc">Екостильна корзинка для прогулянок і пляжу.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Олена</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t31 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t31.avif" alt="Сумка-шопер «Сонячна Ромашка»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Сумка-шопер «Сонячна Ромашка»</h3>
+    <div class="meta">Матеріал: 100% бавовняна пряжа, гачок | Колір: молочний із жовтими серединками | Розмір: 35×30 см</div>
+    <p class="desc">Яскрава еко-сумка, зв'язана у формі ромашок.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Дмитро</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t32 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t32.avif" alt="В'язаний зайчик-сплюшка" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">В'язаний зайчик-сплюшка</h3>
+    <div class="meta">Матеріали: бавовняна пряжа, холлофайбер | Колір: світло-рожевий, бежевий | Довжина: 20 см</div>
+    <p class="desc">Гіпоалергенна м’яка іграшка для немовлят — безпечна і приємна.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Софія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t33 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t33.avif" alt="М'який ведмедик «Зимовий»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">М'який ведмедик «Зимовий»</h3>
+    <div class="meta">Матеріал: натуральний плюш | Колір: світло-бежевий | Висота: 30 см</div>
+    <p class="desc">Авторська плюшева іграшка з шарфом — зроблено вручну з любов’ю.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Софія</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+
+<!-- t34 -->
+<article class="card">
+  <a class="img-wrap" href="#"><img src="img/t34.avif" alt="Ароматична свічка «Піраміда»" loading="lazy"></a>
+  <div class="content">
+    <h3 class="title">Ароматична свічка «Піраміда»</h3>
+    <div class="meta">Матеріали: соєвий віск, ефірні олії | Колір: рожевий | Вага: 150 г</div>
+    <p class="desc">Фігурна свічка ручної роботи з насиченим ароматом ванілі та лаванди.</p>
+    <div class="avail in-stock"><span class="dot"></span>в наявності</div>
+    <div class="row"><div class="master">Майстер: Оксана</div><button class="btn">Додати в кошик</button></div>
+  </div>
+</article>
+    </section>
+  </main>
+</body>
+</html>
